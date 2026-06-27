@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="robots" content="noindex,nofollow,noarchive" />
+  <meta name="theme-color" content="#f4d9cc" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="For You" />
+  <title>For You — July 15</title>
+  <meta name="description" content="A private little countdown made with love." />
+  <link rel="preload" href="assets/images/day-01.jpg" as="image" />
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.png" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app" id="app">
+    <section class="hero" aria-label="Private countdown app">
+      <img class="hero-image" id="heroImage" src="assets/images/day-01.jpg" alt="Today's memory" />
+      <div class="hero-photo" id="heroPhoto" aria-hidden="true"></div>
+      <div class="hero-soft-focus" aria-hidden="true"></div>
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="film-grain" aria-hidden="true"></div>
+      <div class="floating-glow glow-a" aria-hidden="true"></div>
+      <div class="floating-glow glow-b" aria-hidden="true"></div>
+      <div class="confetti" id="confetti" aria-hidden="true"></div>
+
+      <header class="topbar">
+        <span class="round-icon" aria-hidden="true">♡</span>
+        <div class="titlemark">
+          <span>For you.</span>
+          <small>open once a day</small>
+        </div>
+        <button class="round-icon sound-button" id="soundButton" type="button" aria-label="Soft sound on tap">♪</button>
+      </header>
+
+      <div class="layout">
+        <section class="countdown-card" role="group" aria-labelledby="countdownTitle">
+          <p class="overline" id="countdownTitle">Still</p>
+          <button class="days-button" id="daysButton" type="button" aria-label="Open today’s hidden note">
+            <span id="daysNumber">—</span>
+          </button>
+          <p class="days-label" id="daysLabel">days</p>
+          <p class="date-line" id="dateLine">until July 15</p>
+        </section>
+
+        <aside class="memory-card" aria-live="polite">
+          <span class="memory-kicker" id="memoryKicker">today’s memory</span>
+          <strong id="photoCaption">A little moment</strong>
+          <span class="memory-count" id="photoCount">day 1 / 19</span>
+          <div class="progress-track" aria-hidden="true"><span id="progressBar"></span></div>
+          <button class="letter-button" id="letterButton" type="button">open today’s note</button>
+        </aside>
+      </div>
+
+      <footer class="footer-note">made with love, just for you</footer>
+    </section>
+
+    <section class="final-reveal" id="finalReveal" aria-hidden="true">
+      <div class="final-card">
+        <p class="final-kicker">all memories unlocked</p>
+        <h2>Every day led here.</h2>
+        <p id="finalIntro">The countdown is over, but the little moments are still here.</p>
+        <button class="final-letter-button" id="finalLetterButton" type="button">read the final letter ♡</button>
+      </div>
+      <div class="memory-grid" id="memoryGrid" aria-label="Unlocked memories"></div>
+    </section>
+  </main>
+
+  <div class="modal" id="noteModal" aria-hidden="true">
+    <button class="modal-backdrop" data-close="true" aria-label="Close note"></button>
+    <section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="noteTitle">
+      <button class="modal-close" type="button" data-close="true" aria-label="Close note">×</button>
+      <div class="modal-heart" aria-hidden="true">♡</div>
+      <p class="modal-kicker" id="noteKicker">today’s note</p>
+      <h2 id="noteTitle">A hidden message</h2>
+      <p id="noteText"></p>
+      <button class="modal-action" type="button" data-close="true">keep it close ✦</button>
+    </section>
+  </div>
+
+  <noscript>
+    <p class="noscript">This countdown needs JavaScript enabled.</p>
+  </noscript>
+
+  <script src="script.js"></script>
+</body>
+</html>
